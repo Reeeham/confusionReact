@@ -1,22 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Menu from './components/MenuComponent';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import { DISHES } from './shared/dishes';
+import { BrowserRouter } from 'react-router-dom';
+import Main from './components/MainComponent';
 
-function App() {
+class App extends Component{
 
-  return (
+render()
+{
+  return(
+    <BrowserRouter>
     <div className="App">
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Restaurant ConFusion</NavbarBrand>
-          </div>
-        </Navbar>
-        <Menu dishes={DISHES}/>
-      </div>
+      <Main />
+    </div>
+  </BrowserRouter>
   );
+}
 }
 
 export default App;
