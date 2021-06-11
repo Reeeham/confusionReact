@@ -82,7 +82,7 @@ render()
             <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
               <Switch location={this.props.location}>
                   <Route path='/home' component={HomePage} />
-                  <Route exact path='/about' component={() => <About leaders={this.props.leaders} />} />} />
+                  <Route exact path='/about' component={() => <About leaders={this.props.leaders} />} />
                   <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} comments={this.props.comments}/>} />
                   <Route path='/menu/:dishId' component={DishWithId} />
                   <Route exact path='/contact' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />

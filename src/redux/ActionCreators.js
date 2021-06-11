@@ -30,7 +30,7 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
         },
         credentials: "same-origin"
 
-    }) .then(response => {
+    }).then(response => {
         if (response.ok) {
           return response;
         } else {
@@ -45,7 +45,8 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
     .then(response => response.json())
     .then(response => dispatch(addComment(response)))
     .catch(error =>  { console.log('post comments', error.message);
-     alert('Your comment could not be posted\nError: '+error.message); });
+     alert('Your comment could not be posted\nError: '+error.message); }
+     );
 };
 
 
